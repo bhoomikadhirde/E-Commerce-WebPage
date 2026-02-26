@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | E-Commerce Website</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" alt="Logo"></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a class="active" href="cart.html">
+            <i class="far fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CART TABLE -->
+  <section id="cart" class="section-p1">
+    <table width="100%">
+      <thead>
+        <tr>
+          <td>Remove</td>
+          <td>Image</td>
+          <td>Product</td>
+          <td>Price</td>
+          <td>Quantity</td>
+          <td>Subtotal</td>
+        </tr>
+      </thead>
+
+      <!-- DYNAMIC CART ITEMS -->
+      <tbody id="cart-items">
+        <!-- Filled by JavaScript -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- CART TOTAL & COUPON -->
+  <section id="cart-add" class="section-p1">
+
+    <!-- COUPON -->
+    <div id="coupon">
+      <h3>Apply Coupon</h3>
+      <div>
+        <input type="text" id="coupon-code" placeholder="Enter coupon code (SAVE10)">
+        <button class="normal" id="apply-coupon">Apply</button>
+      </div>
+      <p id="coupon-msg"></p>
+    </div>
+
+    <!-- TOTAL -->
+    <div id="subtotal">
+      <h3>Cart Total</h3>
+      <table>
+
+        <tr>
+          <td>Cart Subtotal</td>
+          <td>
+            <span id="original-price">Rs:0</span>
+          </td>
+        </tr>
+
+        <tr id="discount-row" style="display:none;">
+          <td>Discount (10%)</td>
+          <td>- Rs:<span id="discount-amount">0</span></td>
+        </tr>
+
+        <tr>
+          <td><strong>Total</strong></td>
+          <td><strong id="cart-total">Rs:0</strong></td>
+        </tr>
+
+      </table>
+      
+      <button class="normal" id="checkout-btn">Proceed to Checkout</button>
+
+    </div>
+
+  </section>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>

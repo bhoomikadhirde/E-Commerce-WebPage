@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="cart.html"><i class="far fa-shopping-bag"></i><span id="cart-count">0</span></a></li>
+        <li><a href="#" id="login-link">Login</a></li>
+        <li><a href="#" id="logout-link" style="display:none;">Logout</a></li>
+        <li id="user-name" style="display:none;"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LOGIN POPUP -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="loginClose">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+    <p id="loginMsg" style="color:red;"></p>
+  </div>
+</div>
+
+<!-- SIGNUP POPUP -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="signupClose">&times;</span>
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Name" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+    <p id="signupMsg" style="color:red;"></p>
+  </div>
+</div>
+
+
+  <section id="hero">
+    <h4>Trade-in-offer</h4>
+    <h2>Super value deals</h2>
+    <h1>On all products</h1>
+    <p>Save more with coupons & up to 70% off!</p>
+    <button>Shop Now</button>
+  </section>
+
+  <section id="feature" class="section-p1">
+    <div class="fe-box">
+      <img src="img/freeshipping.avif" alt="">
+      <h6>Free Shipping</h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/online-order.avif" alt="">
+      <h6>Online order </h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/savemoney.jpg" alt="">
+      <h6>Save Money </h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/promotion.jpg" alt="">
+      <h6>Promotion </h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/happysell.jpg" alt="">
+      <h6>Happy Sell </h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/support.avif" alt="">
+      <h6>Support</h6>
+    </div>
+  </section>  
+
+  <section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>Summer Collection New Morden Design</p>
+    <div class="pro-container">
+      <div class="pro">
+        <img src="img/f1.webp" alt="">
+        <div class="des">
+          <h5>Green dotted print dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:560</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Green dotted print dress" data-price="560" data-image="img/f1.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f13.jpeg" alt="">
+        <div class="des">
+          <h5>White heart print T-Shirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:260</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="White heart print T-Shirt" data-price="260" data-image="img/f13.jpeg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f10.jpg" alt="">
+        <div class="des">
+          <h5>Beautiful designer sleveless top</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:320</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Beautiful designer sleeveless top" data-price="320" data-image="img/f10.jpg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f21.jpeg" alt="">
+        <div class="des">
+          <h5>Flarred Skirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:410</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Flarred Skirt" data-price="410" data-image="img/f21.jpeg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f27.webp" alt="">
+        <div class="des">
+          <h5>Sea Shells coated Sandal</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:500</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Sea Shells coated Sandal" data-price="500" data-image="img/f27.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f5.webp" alt="">
+        <div class="des">
+          <h5>White Short dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:470</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="White Short dress" data-price="470" data-image="img/f5.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f29.jpg" alt="">
+        <div class="des">
+          <h5>Cotton straight pants</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:510</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Cotton straight pants" data-price="510" data-image="img/f29.jpg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f31.jpg" alt="">
+        <div class="des">
+          <h5>Cotton printed co-rd set</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:750</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Cotton printed co-ord set" data-price="750" data-image="img/f31.jpg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f12.webp" alt="">
+        <div class="des">
+          <h5>Heart printed T-Shirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:260</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Heart printed T-Shirt" data-price="260" data-image="img/f12.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f15.webp" alt="">
+        <div class="des">
+          <h5>Cotton T-shirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:220</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Cotton T-shirt" data-price="220" data-image="img/f15.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f19.webp" alt="">
+        <div class="des">
+          <h5>Pink Short Skirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:350</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Pink Short Skirt" data-price="350" data-image="img/f19.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f30.jpeg" alt="">
+        <div class="des">
+          <h5>Cotton printed plazzo</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:450</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Cotton printed plazzo" data-price="450" data-image="img/f30.jpeg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f11.jpeg" alt="">
+        <div class="des">
+          <h5>Cotton T-shirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:150</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Cotton T-shirt" data-price="150" data-image="img/f11.jpeg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f14.webp" alt="">
+        <div class="des">
+          <h5>Cotton T-shirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:750</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Cotton T-shirt" data-price="750" data-image="img/f14.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f3.jpg" alt="">
+        <div class="des">
+          <h5>White printed dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:750</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="White printed dress" data-price="750" data-image="img/f3.jpg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f4.jpg" alt="">
+        <div class="des">
+          <h5>Cotton short dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:500</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Cotton short dress" data-price="500" data-image="img/f4.jpg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f16.jpg" alt="">
+        <div class="des">
+          <h5>Cotton printed co-rd set</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:750</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Cotton printed co-ord set" data-price="750" data-image="img/f16.jpg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f24.webp" alt="">
+        <div class="des">
+          <h5>Beach Style skirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:250</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Beach Style skirt" data-price="250" data-image="img/f24.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f23.webp" alt="">
+        <div class="des">
+          <h5>Green Short skirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:450</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Green Short skirt" data-price="450" data-image="img/f23.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/f8.webp" alt="">
+        <div class="des">
+          <h5>White cool Top</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:400</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="White cool Top" data-price="400" data-image="img/f8.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/a.jpg" alt="">
+        <div class="des">
+          <h5>Bow Pink</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:400</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Bow Pink" data-price="400" data-image="img/a.jpg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/c.webp" alt="">
+        <div class="des">
+          <h5>Beauty</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:5000</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Beauty" data-price="5000" data-image="img/c.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/d.webp" alt="">
+        <div class="des">
+          <h5>Black cute</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:420</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Black cute" data-price="420" data-image="img/d.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/b.avif" alt="">
+        <div class="des">
+          <h5>Mordern Twist</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:1000</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Mordern Twist" data-price="1000" data-image="img/b.avif">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/1.webp" alt="">
+        <div class="des">
+          <h5>Perl Twist</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:800</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Perl Twist" data-price="800" data-image="img/1.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/3.webp" alt="">
+        <div class="des">
+          <h5>Black Magic heels</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:800</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Black Magic heels" data-price="800" data-image="img/3.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/4.webp" alt="">
+        <div class="des">
+          <h5>Red Wine Heels</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:1400</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Red Wine Heels" data-price="1400" data-image="img/4.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/5.webp" alt="">
+        <div class="des">
+          <h5>Elgant twist</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:2000</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Elgant twist" data-price="2000" data-image="img/5.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/6.webp" alt="">
+        <div class="des">
+          <h5>Desi Heels</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:700</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Desi Heels" data-price="700" data-image="img/6.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/7.jpg" alt="">
+        <div class="des">
+          <h5>White cool</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:400</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="White cool" data-price="400" data-image="img/7.jpg">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/8.webp" alt="">
+        <div class="des">
+          <h5>Brown Heels icon</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:1500</h4>
+        </div>
+        <a href="#" class="add-to-cart" data-name="Brown Heels icon" data-price="1500" data-image="img/8.webp">
+          <i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="img/2.avif" alt="">
+        <div class="des">
+          <h5>Stylish Black heels</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Rs:1000</h4> 
+        </div>
+        <a href="#" class="add-to-cart" data-name="Stylish Black heels" data-price="1000" data-image="img/2.avif">
+          </i><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="banner" class="section-m1">
+    <h4>Repair Services</h4>
+    <h2>Up to <span>70% OFF</span> - All T-shirts and Dresses</h2>
+    <button class="normal">Explore More</button>
+  </section>
+
+  <!-- ================= QUICK VIEW MODAL ================= -->
+
+<div id="productModal" class="modal">
+  <div class="modal-content product-modal">
+
+    <span class="close" id="productClose">&times;</span>
+
+    <div class="modal-body">
+
+  <!-- LEFT → IMAGE GALLERY -->
+  <div class="modal-img">
+
+    <img id="modalImage" src="" alt="">
+
+    <div class="gallery">
+      <img class="thumb active-thumb">
+      <img class="thumb">
+      <img class="thumb">
+    </div>
+
+  </div>
+
+  <!-- RIGHT → DETAILS -->
+  <div class="modal-details">
+    <h2 id="modalName"></h2>
+    <h4>Rs: <span id="modalPrice"></span></h4>
+
+    <p id="modalDesc">Premium quality product</p>
+
+    <!-- SIZE SELECTOR -->
+    <label>Size:</label>
+    <div class="size-selector">
+      <span class="size active-size">S</span>
+      <span class="size">M</span>
+      <span class="size">L</span>
+      <span class="size">XL</span>
+    </div>
+
+    <!-- QUANTITY -->
+    <label>Quantity:</label>
+    <input type="number" id="modalQty" value="1" min="1">
+
+    <div class="modal-buttons">
+      <button id="modalAddToCart">Add To Cart</button>
+      <button id="buyNowBtn">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html> 

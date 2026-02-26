@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin-Pannel</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+  </section>
+
+<section id="admin-panel">
+  <h2>Admin Order Panel</h2>
+
+  <table>
+    <tr>
+      <th>Order ID</th>
+      <th>Total</th>
+      <th>Payment</th>
+      <th>Date</th>
+    </tr>
+  </table>
+</section>
+
+<script>
+
+const orders = JSON.parse(localStorage.getItem("orders")) || [];
+const table = document.querySelector("table");
+
+orders.forEach(o => {
+  table.innerHTML += `
+    <tr>
+      <td>${o.id}</td>
+      <td>Rs ${o.total}</td>
+      <td>${o.payment}</td>
+      <td>${o.date}</td>
+    </tr>
+  `;
+});
+</script>
+
+</body>
+</html>

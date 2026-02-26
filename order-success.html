@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order-Success</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+  </section>
+
+<section id="order-success">
+  <h1>🎉 Order Placed Successfully!</h1>
+  <p>Thank you for shopping with us.</p>
+
+  <a href="index.html">Continue Shopping</a> |
+  <a href="admin.html">Admin Panel</a>
+
+  <br><br>
+  <button onclick="sendInvoice()">Email Invoice</button>
+</section>
+
+<script>
+function sendInvoice() {
+    const orders = JSON.parse(localStorage.getItem("orders"));
+    const last = orders[orders.length - 1];
+
+    const body = `
+Order ID: ${last.id}
+Total: Rs ${last.total}
+Payment: ${last.payment}
+Date: ${last.date}
+`;
+
+    window.location.href =
+      `mailto:?subject=Order Invoice&body=${encodeURIComponent(body)}`;
+}
+</script>
+
+
+</body>
+</html>                    

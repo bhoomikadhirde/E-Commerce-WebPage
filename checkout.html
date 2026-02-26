@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+  </section>
+
+<section id="checkout-section">
+  <h2>Checkout</h2>
+
+  <h3>Order Summary</h3>
+  <table border="1" id="order-table">
+    <tr>
+      <th>Product</th>
+      <th>Qty</th>
+      <th>Price</th>
+    </tr>
+  </table>
+
+  <h3>Total: Rs <span id="total"></span></h3>
+
+  <hr>
+
+  <h3>Payment Method</h3>
+  <input type="radio" name="pay" value="COD" checked> Cash on Delivery <br>
+  <input type="radio" name="pay" value="UPI"> UPI <br>
+  <input type="radio" name="pay" value="Card"> Card <br><br>
+
+  <button onclick="placeOrder()">Place Order</button>
+</section>
+
+<script src="script.js"></script>
+<script src="script.js"></script>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const total = localStorage.getItem("checkoutTotal");
+
+  document.getElementById("total").innerText = total;
+
+  const table = document.getElementById("order-table");
+
+  cart.forEach(item => {
+    table.innerHTML += `
+      <tr>
+        <td>${item.name}</td>
+        <td>${item.quantity}</td>
+        <td>Rs ${item.price * item.quantity}</td>
+      </tr>
+    `;
+  });
+
+  function placeOrder() {
+      const payment = document.querySelector('input[name="pay"]:checked').value;
+      saveOrder(payment); // THIS WAS FAILING EARLIER
+  }
+</script>
+
+</body>
+</html>                                                                                                                                                 
